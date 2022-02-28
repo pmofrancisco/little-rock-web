@@ -23,6 +23,8 @@ const Link = styled(RouterLink)`
 export default () => (
   <Header>
     <Brand to="/">LITTLE ROCK</Brand>
+    <Link to="/auth/login">Login</Link>
+    <Link to="/auth/signup">Signup</Link>
     <Link to="/about-us">About Us</Link>
   </Header>
 );
