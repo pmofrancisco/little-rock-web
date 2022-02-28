@@ -17,6 +17,7 @@ const Header = styled.div`
 
 const Link = styled(RouterLink)`
   color: black;
+  padding-left: 10px;
   text-decoration: none;
 `;
 
