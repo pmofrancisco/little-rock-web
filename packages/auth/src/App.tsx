@@ -8,14 +8,11 @@ type AppProps = {
   history: History | MemoryHistory;
 };
 
-export default ({ history }: AppProps) => {
-  console.log('history', history);
-  return (
-    <Router history={history}>
-      <Switch>
-        <Route path="/auth/login" component={Login} />
-        <Route path="/auth/signup" component={Signup} />
-      </Switch>
-    </Router>
-  );
-};
+export default ({ history }: AppProps) => (
+  <Router history={history}>
+    <Switch>
+      <Route path="/auth/login" component={Login} />
+      <Route path="/auth/signup" component={Signup} />
+    </Switch>
+  </Router>
+);
