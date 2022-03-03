@@ -1,0 +1,13 @@
+name: tests-auth-service
+
+on:
+  pull_request:
+    paths:
+      - 'packages/auth/**'
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd packages/auth && npm install && npm run test:ci
