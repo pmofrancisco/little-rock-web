@@ -12,7 +12,7 @@ export default () => {
   return (
     <Router history={browserHistory}>
       <Header />
-      <Suspense fallback={<div>Loading....</div>}>
+      <Suspense fallback={<div>Loading....!</div>}>
         <Switch>
           <Route path="/auth" component={AuthLazy} />
           <Route path="/about-us" component={AboutUsLazy} />
