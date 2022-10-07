@@ -4,7 +4,6 @@ const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 
 const domain = process.env.PRODUCTION_DOMAIN;
-const domainHome = process.env.PRODUCTION_DOMAIN_HOME;
 
 const prodConfig = {
   mode: 'production',
@@ -16,7 +15,7 @@ const prodConfig = {
     new ModuleFederationPlugin({
       name: 'container',
       remotes: {
-        home: `home@${domainHome}/remoteEntry.js`,
+        home: `home@https://d3522tb8clftnp.cloudfront.net/remoteEntry.js`,
         aboutus: `aboutus@${domain}/about-us/latest/remoteEntry.js`,
         auth: `auth@${domain}/auth/latest/remoteEntry.js`,
       },

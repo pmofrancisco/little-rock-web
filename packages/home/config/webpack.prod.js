@@ -3,13 +3,11 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const packageJson = require('../package.json');
 const commonConfig = require('./webpack.common');
 
-const domainHome = process.env.PRODUCTION_DOMAIN_HOME;
-
 const prodConfig = {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
-    publicPath: `${domainHome}/`,
+    publicPath: 'https://d3522tb8clftnp.cloudfront.net/',
     clean: true,
   },
   plugins: [
